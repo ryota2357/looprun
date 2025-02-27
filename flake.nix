@@ -1,5 +1,5 @@
 {
-  description = "TODO";
+  description = "looprun package and development environment";
 
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs?ref=nixpkgs-unstable";
@@ -23,6 +23,8 @@
         pkgs = nixpkgs.legacyPackages.${system};
       in
       {
+        packages.default = pkgs.callPackage ./looprun.nix { };
+
         devShells.default = pkgs.mkShellNoCC {
           packages = with pkgs; [
             go
