@@ -1,11 +1,13 @@
-/*
-Copyright © 2025 NAME HERE <EMAIL ADDRESS>
-
-*/
 package main
 
-import "github.com/ryota2357/looprun/cmd"
+import (
+	"fmt"
+
+	"github.com/ryota2357/looprun/cli"
+)
 
 func main() {
-	cmd.Execute()
+	if err := cli.Execute(); err != nil {
+		fmt.Println(err)
+	}
 }
