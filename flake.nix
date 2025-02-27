@@ -28,6 +28,7 @@
             go
             gopls
             cobra-cli
+            nil
           ];
         };
 
